@@ -6,13 +6,17 @@ axios
     console.log(result.data);
 
   result.data.forEach(car => {
- const lists = document.createElement('li') 
-   lists.innerHTML =`<table <tr style = 'margin : 2px '>
-   <td style = 'margin : 7px '> ${car.make} <td>
-   <td style = 'margin : 2px '> ${car.color} <td>
-   <td style = 'margin : 2px '> ${car.model} <td>
-   </tr> </table`
+ const lists = document.createElement('ul') 
+   lists.innerHTML =`<table>
+   <tr>
+   <th> make <th><th> color<th><th> model <th>
+   </tr>
+    <tr>
+   <td> ${car.make} <td><td> ${car.color} <td> <td > ${car.model} <td>
+   </tr> 
+   </table>`
    carElem.appendChild(lists);
+   carElem.style.color='blue';
 });  
 });
 
