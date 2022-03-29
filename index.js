@@ -7,11 +7,10 @@ axios
 
   result.data.forEach(car => {
  const lists = document.createElement('ul') 
-   lists.innerHTML =`<table>
-   <tr>
+   lists.innerHTML =`<table >
    <th> make <th><th> color<th><th> model <th>
-   </tr>
-    <tr>
+   <tr >
+   
    <td> ${car.make} <td><td> ${car.color} <td> <td > ${car.model} <td>
    </tr> 
    </table>`
