@@ -6,7 +6,7 @@ axios
     console.log(result.data);
 
   result.data.forEach(car => {
- const lists = document.createElement('ul') 
+ const lists = document.createElement('li') 
    lists.innerHTML =`<table >
    <th> make <th><th> color<th><th> model <th>
    <tr >
