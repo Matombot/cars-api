@@ -2,8 +2,8 @@ body {
     background-color: greenyellow;
 }
 .table, td,th {
-margin: 2px;
+margin: 0px;
 padding: 15px;
 text-align: center;
-border-bottom: 2px solid;
+border-bottom: 1px solid;
 }
