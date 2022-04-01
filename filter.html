@@ -9,19 +9,68 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
+    <script type="text/x-template" class="hbsTemplate">
+        <table >
+            <tr>
+             <th>MAKE</th>
+             <th>MODEL</th>
+             <th>COLOUR</th>
+             <th>PRICE</th>
+             <th>REG-NUMBER</th>
+             
+           </tr>
+           {{#each car}}
+          
+           <tr>
+             <td>{{make}}</td>
+             <td>{{model}}</td>
+             <td>{{color}}</td>
+             <td>{{price}}</td>
+             <td>{{reg_number}}</td>
+       
+           </tr>
+           {{/each}}
+         </table>
+          
+    </script>
 </head>
 
 <body>
     <div class="container">
         <h1>car list</h1>
         <div>
-            <button type="button" class="filterBtn">filter</button>
+
         </div>
-        <table class="cars">
-          <th> cars </th>
-        </table>
+
+    </div>
+    <div>
+
+        <p> Select from the given colour:
+            <label for="color">filter by color</label>
+            <select name="color" id="color" class="brand">
+                <option value="All">All</option>
+                <option value="Orange">Orange</option>
+                <option value="Blue">Blue</option>
+                <option value="Red">Red</option>
+                <option value="White">White</option>
+            </select>
+        </p>
+        <p> Select from the given brands:
+            <label for="">filter by brand</label>
+            <select name="brand" id="brand" class="brand">
+                <option value="All">All</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Ford">Ford</option>
+                <option value="Volkswagen">Volkswagen</option>
+            </select>
+        </p>
+        <button type="button" class="filterBtn">filter</button>
+    </div>
+    <div class="cars">
+
     </div>
 </body>
-<script src="filter.js"></script>
+<script src="./filter.js"></script>
 
 </html>

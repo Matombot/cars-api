@@ -1,19 +1,43 @@
-const carElem = document.querySelector(".cars")
-const filterBtn = document.querySelector(".filterBtn")
 
-filterBtn.addEventListener('click',function(){
- axios
-.get("http://api-tutor.herokuapp.com/v1/cars")
-.then(function(result){
-    console.log(result.data);
+const colorElem = document.querySelector(".color");
+const brandElem = document.querySelector(".brand")
+const filterBtn = document.querySelector(".filterBtn");
+const cars = document.querySelector(".cars");
+const hbsElem = document.querySelector(".hbsTemplate").innerHTML;
+const carElem = Handlebars.compile(hbsElem);
 
-  result.data.forEach(car => {
- const lists = document.createElement('tr') 
-   lists.innerHTML =`<tr>
-   <td> ${car.make} <td><td> ${car.color} <td> <td > ${car.model} <td>
-    <tr>`
-   carElem.appendChild(lists);
-   carElem.style.color='blue';
-});  
-});   
+filterBtn.addEventListener("click", function () {
+let colors =document.getElementById("color").value;
+let brands = document.getElementById("brand").value;
+ if (colors && brands) {
+
+    axios
+        .get(`https://api-tutor.herokuapp.com/v1/cars/make/${brands}/color/${colors}`)
+        .then(function (result) {
+            cars.innerHTML =carElem({
+                car: result.data
+            });
+
+        })
+}
+else if (colors) {
+    axios
+        .get(`https://api-tutor.herokuapp.com/v1/cars/color/${colors}`)
+        .then(function (result) {
+            cars.innerHTML =carElem({
+                car: result.data
+            });
+
+        })
+} else if (brands) {
+    axios
+        .get(`https://api-tutor.herokuapp.com/v1/cars/make/${brands}`)
+        .then(function (result) {
+            cars.innerHTML =carElem({
+                car: result.data
+            });
+
+        })
+} 
+    
 })

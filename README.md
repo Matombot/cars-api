@@ -20,4 +20,5 @@ Use the data from the API calls from api-tutor
 Create a new project called cars-api-widget - deploy it using GitHub pages. And shared the deployed URL with gwi-mentors@projectcodex.co
 
 A car filter widget
-Once done with the above create a widget where the user can select a brand and/or a color from dropdowns and press a button to display a list of cars for the selected color & or brand.
+Once done with the above create a widget where the user can select a brand and/or a color from dropdowns 
+and press a button to display a list of cars for the selected color & or brand.
