@@ -22,11 +22,11 @@
            {{#each car}}
           
            <tr>
-             <td>{{make}}</td>
-             <td>{{model}}</td>
-             <td>{{color}}</td>
-             <td>{{price}}</td>
-             <td>{{reg_number}}</td>
+             <td>{{this.make}}</td>
+             <td>{{this.model}}</td>
+             <td>{{this.color}}</td>
+             <td>{{this.price}}</td>
+             <td>{{this.reg_number}}</td>
        
            </tr>
            {{/each}}
@@ -37,7 +37,7 @@
 
 <body>
     <div class="container">
-        <h1>car list</h1>
+        <h1>filtered car list</h1>
         <div>
 
         </div>
@@ -48,7 +48,7 @@
         <p> Select from the given colour:
             <label for="color">filter by color</label>
             <select name="color" id="color" class="brand">
-                <option value="All">All</option>
+                <option value="">All</option>
                 <option value="Orange">Orange</option>
                 <option value="Blue">Blue</option>
                 <option value="Red">Red</option>
@@ -58,7 +58,7 @@
         <p> Select from the given brands:
             <label for="">filter by brand</label>
             <select name="brand" id="brand" class="brand">
-                <option value="All">All</option>
+                <option value="">All</option>
                 <option value="Toyota">Toyota</option>
                 <option value="Nissan">Nissan</option>
                 <option value="Ford">Ford</option>

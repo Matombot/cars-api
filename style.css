@@ -1,9 +1,29 @@
 body {
-    background-color: greenyellow;
+    background-color: #90E704;
 }
 .table, td,th {
 margin: 0px;
 padding: 15px;
 text-align: center;
 border-bottom: 1px solid;
+}
+.car{
+background-color: #E80391;
+padding: 20px;
+}
+.carss{
+background-color: #0490E7;
+padding: 20px;
+}
+.main {
+    margin:1px ;
+    padding: 20px;
+    border: 1px;
+    display: flex;
+}
+img {
+    border-radius: 50%;
+}
+.showbrands {
+    color: beige;
 }
