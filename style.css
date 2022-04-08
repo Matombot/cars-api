@@ -21,8 +21,10 @@ padding: 20px;
     border: 1px;
     display: flex;
 }
-img {
-    border-radius: 50%;
+.filterBtn{
+    padding: 10px;
+    border: 1px;
+    background-color: #E80391;
 }
 .showbrands {
     color: beige;

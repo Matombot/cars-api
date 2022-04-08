@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>car list</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
+  <script type="text/x-template" class="showTemplate">
+    <ul>
+      <h3>display list of brands</h3>
+      {{#each showbrand}}
+      <li>{{this}}</li>
+        
+        {{/each}}
+    </ul>     
+  </script>
+  <script type="text/x-template" class="showsTemplate">
+      
+    <ul>
+      <h3>display list of colors</h3>
+      {{#each showcolor}}
+      <li>{{this}}</li>
+        
+        {{/each}}
+    </ul>  
+  </script>
+
+
+  <script type="text/x-template" class="hbsTemplate">
+  <h3>all cars are displayed here</h3>
+      <table >
+          <tr>
+           <th>MAKE</th>
+           <th>MODEL</th>
+           <th>COLOUR</th>
+           <th>PRICE</th>
+           <th>REG-NUMBER</th>
+         </tr>
+         {{#each car}}
+        
+         <tr>
+           <td>{{make}}</td>
+           <td>{{model}}</td>
+           <td>{{color}}</td>
+           <td>{{price}}</td>
+           <td>{{reg_number}}</td>
+     
+         </tr>
+         {{/each}}
+       </table>
+       
+        
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>car list</h1>
+    <div class="brands"></div>
+    <div class="colors"></div>
+    <div class="cars">
+  
+    </div>
+
+  </div>
+  <div class="main">
+    
+    <div class="carss">
+      <a href="filter.html"> filtered cars</a>
+    </div>
+  </div>
+</body>
+
+<script src="index.js"></script>
+
+</html>
